@@ -2,7 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs/promises");
 
-function dynamicHTML (answers) {
+function dynamicHTML ({ Title, Description, Installation, Usage, Contribution, Contact, Github, Email }) {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -45,23 +45,23 @@ function dynamicHTML (answers) {
     </style>
     
     <body style="background-color: #5a5a5a; font-family: 'Courier New', Courier, monospace">
-        <h1>${answers.Title}</h1>
-        <h3>${answers.Description}</h3>
+        <h1>${Title}</h1>
+        <h3>${Description}</h3>
         <br>
         <h2>Table of Contents</h2>
         <h4>Installation Instructions</h4>
-        <p>${answers.Installation}</p>
+        <p>${Installation}</p>
         <h4>Usage Information</h4>
-        <p>${answers.Usage}</p>
+        <p>${Usage}</p>
         <h4>Contribution Guidelines</h4>
-        <p>${answers.Contribution}</p>
+        <p>${Contribution}</p>
         <br>
         <h2>Contact Information</h2>
-        <p>${answers.Contact}</p>
+        <p>${Contact}</p>
         <h4>GitHub Username</h4>
-        <p>${answers.Github}</p>
+        <p>${Github}</p>
         <h4>Email Address</h4>
-        <p>${answers.Email}</p>
+        <p>${Email}</p>
     
     
     
