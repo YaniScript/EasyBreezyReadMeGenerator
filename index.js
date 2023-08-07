@@ -2,71 +2,57 @@
 const inquirer = require("inquirer");
 const fs = require("fs/promises");
 
-function dynamicHTML ({ Title, Description, Installation, Usage, Contribution, Contact, Github, Email }) {
-    return `<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
+function dynamicMD ({ Title, Description, Installation, Usage, Tests, Contribution, License, Contact, Github, Email }) {
+    return `# **${Title}**
+
+## **Project-Description**
+   ${Description}
     
-    <style>
-        h1 { 
-            text-align: center;
-            font-weight: 700;
-            color: #06a6f4;
-            font-size: 40px;
-        }
-        h2{
-            font-weight: 700;
-            color: #f49006;
-            font-size: 30px;
-        }
-        h3 {
-            text-align: center;
-            font-weight: 500;
-            color: #4cc1fb;
-            font-size: 25px;
-        }
-        h4 {
-            color: #4cc1fb;
-            font-size: 22px;
-        }
-        p{
-            color: white;
-            font-size: 17px;
-        }
-        
+---
     
+## **Table of Contents**
+###  [Installation](#installation)
+###  [Usage Information](#usage)
+###  [Testing Instructions](#tests)
+###  [Contribution Guidelines](#contribution)
+###  [Licensing Information](#license)
+###  [Questions](#contact)
     
-        
-    </style>
+---
+## **Installation Information** 
+    ${Installation}
     
-    <body style="background-color: #5a5a5a; font-family: 'Courier New', Courier, monospace">
-        <h1>${Title}</h1>
-        <h3>${Description}</h3>
-        <br>
-        <h2>Table of Contents</h2>
-        <h4>Installation Instructions</h4>
-        <p>${Installation}</p>
-        <h4>Usage Information</h4>
-        <p>${Usage}</p>
-        <h4>Contribution Guidelines</h4>
-        <p>${Contribution}</p>
-        <br>
-        <h2>Contact Information</h2>
-        <p>${Contact}</p>
-        <h4>GitHub Username</h4>
-        <p>${Github}</p>
-        <h4>Email Address</h4>
-        <p>${Email}</p>
+---
     
+## **Usage Information**
+    ${Usage}
     
+---
     
-    </body>
-    </html>`
+## **Testing Instructions**
+    ${Tests}
+    
+---
+    
+## **Contribution Guidelines**
+    ${Contribution}
+    
+---
+    
+## **Licensing Information** 
+    ${License}
+    
+---
+    
+## **Contact Information**
+    ${Contact}
+    
+### Github Infomation
+    ${Github}
+    
+### Email Address
+    ${Email}
+`
 }
 
 // TODO: Create an array of questions for user input
@@ -94,8 +80,18 @@ const questions = [
         },
         {
             type: 'input',
+            message: 'How are tests performed on this application?',
+            name: 'Tests',
+        },
+        {
+            type: 'input',
             message: 'If users are able to contribute to this application, what should they know about ethically contributing to this project?',
             name: 'Contribution',
+        },
+        {
+            type: 'input',
+            message: 'How is the program/application licensed?',
+            name: 'License',
         },
         {
             type:'input',
@@ -115,9 +111,9 @@ const questions = [
         ])
         .then((answers) => {
             // console.log(answers);
-            const makeHTML = dynamicHTML(answers);
+            const makeMD = dynamicMD(answers);
     
-        fs.writeFile("ReadMe.html", makeHTML) 
+        fs.writeFile("README.md", makeMD) 
             .then(() => console.log("File Created!"))
             .catch((err) => console.error(err))
 
