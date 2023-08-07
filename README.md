@@ -1,7 +1,7 @@
-# **dslfihjsdfhsdfhlajf**
+# **EasyBreezyReadMeGenerator**
 
 ## **Project-Description**
-   lihaofhaoiesrfvosnrfh
+   Did My Best
     
 ---
     
@@ -15,35 +15,35 @@
     
 ---
 ## **Installation Information** 
-    sfoisnfohnglwsf
+    I cannot wait until I'm more fluent in this!
     
 ---
     
 ## **Usage Information**
-    khfovbsfohsfk
+    I have big dreams with this coding shit
     
 ---
     
 ## **Testing Instructions**
-    ohsbsfohalujhsdf
+    Hopefully I can go back to school and get my masters in something like this
     
 ---
     
 ## **Contribution Guidelines**
-    hoanodujbnsofh
+    or maybe data science? who knows
     
 ---
     
 ## **Licensing Information** 
-    ishfb
+    I want this to be my next career
     
 ---
     
 ## **Contact Information**
-    igdbf
+    I love having my own day to do as I like and be in the house
     
 ### Github Infomation
-    gsofiuhbsofvub ibsfoin oiyh o hosfbosfyh
+    Yaniscript
     
 ### Email Address
-    oihsfihsifhyohnsf 
+    dayana.montgomery@gmail.com
